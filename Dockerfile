@@ -16,6 +16,7 @@ RUN apt-get -y autoremove && apt-get clean
 # install Kali Linux "Top 10" metapackage and a couple "nice to have" tools
 RUN apt-get -y install kali-linux-top10 
 RUN gem install highline
+WORKDIR '/app'
+COPY Drupalgeddon2 .
 RUN adduser -D hackme
-WORKDIR /app
 CMD ["/bin/bash"]
