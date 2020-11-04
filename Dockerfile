@@ -8,7 +8,7 @@
 # More info: https://medium.com/@infosec_stuff/kali-linux-in-a-docker-container-5a06311624eb
 FROM kalilinux/kali-linux-docker
 
-RUN chmod +x /root
+#RUN chmod +x /root
 # do APT update
 RUN apt-get -y update && apt-get -y upgrade 
 RUN apt-get -y install weevely && apt-get -y install curl && apt-get -y install ruby 
@@ -18,5 +18,5 @@ RUN apt-get -y install kali-linux-top10
 RUN gem install highline
 WORKDIR '/app'
 COPY Drupalgeddon2 .
-RUN adduser -D hackme
+#RUN adduser -D hackme
 CMD ["/bin/bash"]
